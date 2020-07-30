@@ -13,7 +13,7 @@
     'category': 'Custom Development',
 
     # any module necessary for this one to work correctly
-    'depends': ['website'],
+    'depends': ['website','web'],
 
     # always loaded
     'data': [
