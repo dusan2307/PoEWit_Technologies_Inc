@@ -13,5 +13,33 @@
                 <script type="text/javascript" src="/poewit_web/static/src/js/play_audio.js"></script>  
             </xpath>  
         </template>
+
+        <!-- Hiding the add to cart and the quantity buttons -->
+        <template id="product_quantity_PoEWit" name="poewit product quantity" inherit_id="website_sale.product_quantity">
+            <xpath expr="//div[hasclass('css_quantity')]" position="attributes">
+                <attribute name="groups">base.group_user,base.group_portal</attribute>
+            </xpath>
+        </template>
+
+        <template id="product_PoEWit" name="poewit product" inherit_id="website_sale.product" priority="99">
+            <xpath expr="//a[@id='add_to_cart']" position="replace">
+                <a id="add_to_cart" groups="base.group_user,base.group_portal" class="btn btn-success btn-lg mt8 js_check_product a-submit d-block" href="#">
+                    <i class="fa fa-shopping-cart"/>
+                    Add to Cart
+                </a>
+            </xpath>
+        </template>
+
+        <template id="products_add_to_cart_PoEWit" name="poewit Add to Cart" inherit_id="website_sale.products_add_to_cart" priority="99">
+            <xpath expr="//t[@t-if='product_variant_id']" position="attributes">
+                <attribute name="groups">base.group_user,base.group_portal</attribute>
+            </xpath>
+        </template>
+
+        <template id="s_products_recently_viewed_PoEWit" name="poewit Add to Cart" inherit_id="website_sale.s_products_recently_viewed" priority="99">
+            <xpath expr="//section[hasclass('s_wsale_products_recently_viewed')]" position="attributes">
+                <attribute name="groups">base.group_user,base.group_portal</attribute>
+            </xpath>
+        </template>
     </data>
 </odoo>
