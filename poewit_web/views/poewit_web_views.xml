@@ -28,6 +28,9 @@
                     Add to Cart
                 </a>
             </xpath>
+            <xpath expr="//t[@t-call='website_sale.product_price']" position="attributes">
+                <attribute name="groups">base.group_user,base.group_portal</attribute>
+            </xpath>
         </template>
 
         <template id="products_add_to_cart_PoEWit" name="poewit Add to Cart" inherit_id="website_sale.products_add_to_cart" priority="99">
