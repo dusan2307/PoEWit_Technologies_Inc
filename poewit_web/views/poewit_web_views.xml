@@ -33,6 +33,12 @@
             </xpath>
         </template>
 
+        <template id="products_item_PoEWit" name="poewit product item" inherit_id="website_sale.products_item">
+            <xpath expr="//div[hasclass('product_price')]" position="attributes">
+                <attribute name="groups">base.group_user,base.group_portal</attribute>
+            </xpath>
+        </template>
+
         <template id="products_add_to_cart_PoEWit" name="poewit Add to Cart" inherit_id="website_sale.products_add_to_cart" priority="99">
             <xpath expr="//t[@t-if='product_variant_id']" position="attributes">
                 <attribute name="groups">base.group_user,base.group_portal</attribute>
