@@ -50,5 +50,11 @@
                 <attribute name="groups">base.group_user,base.group_portal</attribute>
             </xpath>
         </template>
+
+        <template id="product_wishlist_PoEWit" name="poewit Wishlist Page" inherit_id="website_sale_wishlist.product_wishlist" priority="99">
+            <xpath expr="//td[hasclass('td-wish-btn')]" position="attributes">
+                <attribute name="groups">base.group_user,base.group_portal</attribute>
+            </xpath>
+        </template>
     </data>
 </odoo>
