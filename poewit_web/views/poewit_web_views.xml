@@ -1,60 +1,45 @@
 <odoo>
-    <data>
-        <template id="web_homepage_PoEWit" inherit_id="__export__.ir_ui_view_2514_725a71c8" website_id="website.website_poewit_live">
-            <xpath expr="//section[hasclass('bg-epsilon')]//span[hasclass('fa-volume-up')]" position="attributes">
-                <attribute name="onclick">playAudio()</attribute>
-                <attribute name="style">cursor: pointer</attribute> 
-            </xpath>
-        </template>
-    
-        <template id="assets_frontend" name="poewit assets" inherit_id="website.assets_frontend">  
-            <xpath expr="script[last()]" position="after">
-                <link rel="stylesheet" type="text/scss" href="/poewit_web/static/src/scss/style.scss"/>
-                <script type="text/javascript" src="/poewit_web/static/src/js/play_audio.js"></script>  
-            </xpath>  
-        </template>
+    <template id="web_homepage_PoEWit" inherit_id="__export__.ir_ui_view_2514_725a71c8" website_id="website.website_poewit_live">
+        <xpath expr="//section[hasclass('bg-epsilon')]//span[hasclass('fa-volume-up')]" position="attributes">
+            <attribute name="onclick">playAudio()</attribute>
+            <attribute name="style">cursor: pointer</attribute> 
+        </xpath>
+    </template>
 
-        <!-- Hiding the add to cart and the quantity buttons -->
-        <template id="product_quantity_PoEWit" name="poewit product quantity" inherit_id="website_sale.product_quantity">
-            <xpath expr="//div[hasclass('css_quantity')]" position="attributes">
-                <attribute name="groups">base.group_user,base.group_portal</attribute>
-            </xpath>
-        </template>
+    <!-- Hiding the add to cart and the quantity buttons -->
+    <template id="product_quantity_PoEWit" name="poewit product quantity" inherit_id="website_sale.product_quantity">
+        <xpath expr="//div[hasclass('css_quantity')]" position="attributes">
+            <attribute name="groups">base.group_user,base.group_portal</attribute>
+        </xpath>
+    </template>
 
-        <template id="product_PoEWit" name="poewit product" inherit_id="website_sale.product" priority="99">
-            <xpath expr="//a[@id='add_to_cart']" position="replace">
-                <a id="add_to_cart" groups="base.group_user,base.group_portal" class="btn btn-success btn-lg mt8 js_check_product a-submit d-block" href="#">
-                    <i class="fa fa-shopping-cart"/>
-                    Add to Cart
-                </a>
-            </xpath>
-            <xpath expr="//t[@t-call='website_sale.product_price']" position="attributes">
-                <attribute name="groups">base.group_user,base.group_portal</attribute>
-            </xpath>
-        </template>
+    <template id="product_PoEWit" name="poewit product" inherit_id="website_sale.product" priority="99">
+        <xpath expr="//a[@id='add_to_cart']" position="replace">
+            <a id="add_to_cart" groups="base.group_user,base.group_portal" class="btn btn-success btn-lg mt8 js_check_product a-submit d-block" href="#">
+                <i class="fa fa-shopping-cart"/>
+                Add to Cart
+            </a>
+        </xpath>
+        <xpath expr="//t[@t-call='website_sale.product_price']" position="attributes">
+            <attribute name="groups">base.group_user,base.group_portal</attribute>
+        </xpath>
+    </template>
 
-        <template id="products_item_PoEWit" name="poewit product item" inherit_id="website_sale.products_item">
-            <xpath expr="//div[hasclass('product_price')]" position="attributes">
-                <attribute name="groups">base.group_user,base.group_portal</attribute>
-            </xpath>
-        </template>
+    <template id="products_item_PoEWit" name="poewit product item" inherit_id="website_sale.products_item">
+        <xpath expr="//div[hasclass('product_price')]" position="attributes">
+            <attribute name="groups">base.group_user,base.group_portal</attribute>
+        </xpath>
+    </template>
 
-        <template id="products_add_to_cart_PoEWit" name="poewit Add to Cart" inherit_id="website_sale.products_add_to_cart" priority="99">
-            <xpath expr="//t[@t-if='product_variant_id']" position="attributes">
-                <attribute name="groups">base.group_user,base.group_portal</attribute>
-            </xpath>
-        </template>
+    <template id="products_add_to_cart_PoEWit" name="poewit Add to Cart" inherit_id="website_sale.products_add_to_cart" priority="99">
+        <xpath expr="//t[@t-if='product_variant_id']" position="attributes">
+            <attribute name="groups">base.group_user,base.group_portal</attribute>
+        </xpath>
+    </template>
 
-        <template id="s_products_recently_viewed_PoEWit" name="poewit Add to Cart" inherit_id="website_sale.s_products_recently_viewed" priority="99">
-            <xpath expr="//section[hasclass('s_wsale_products_recently_viewed')]" position="attributes">
-                <attribute name="groups">base.group_user,base.group_portal</attribute>
-            </xpath>
-        </template>
-
-        <template id="product_wishlist_PoEWit" name="poewit Wishlist Page" inherit_id="website_sale_wishlist.product_wishlist" priority="99">
-            <xpath expr="//td[hasclass('td-wish-btn')]" position="attributes">
-                <attribute name="groups">base.group_user,base.group_portal</attribute>
-            </xpath>
-        </template>
-    </data>
+    <template id="product_wishlist_PoEWit" name="poewit Wishlist Page" inherit_id="website_sale_wishlist.product_wishlist" priority="99">
+        <xpath expr="//td[hasclass('td-wish-btn')]" position="attributes">
+            <attribute name="groups">base.group_user,base.group_portal</attribute>
+        </xpath>
+    </template>
 </odoo>
