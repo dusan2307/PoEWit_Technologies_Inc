@@ -1,5 +1,5 @@
 <odoo>
-    <template id="web_homepage_PoEWit" inherit_id="__export__.ir_ui_view_2514_725a71c8" website_id="website.website_poewit_live">
+    <template id="web_homepage_PoEWit" inherit_id="__export__.ir_ui_view_2514_725a71c8">
         <xpath expr="//section[hasclass('bg-epsilon')]//span[hasclass('fa-volume-up')]" position="attributes">
             <attribute name="onclick">playAudio()</attribute>
             <attribute name="style">cursor: pointer</attribute> 
